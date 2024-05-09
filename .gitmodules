@@ -4,4 +4,4 @@
 	branch = 4.2
 [submodule "RakNet"]
 	path = RakNet
-	url = https://github.com/facebookarchive/RakNet
+	url = https://github.com/MFDGaming/RakNet-MCPI
