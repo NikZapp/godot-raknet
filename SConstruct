@@ -24,6 +24,12 @@ if env["platform"] == "macos":
         ),
         source=sources,
     )
+elif env["platform"] == "windows":
+    env.Append(LIBS=["ws2_32"])
+    library = env.SharedLibrary(
+        "build/libgdraknet{}{}".format(env["suffix"], env["SHLIBSUFFIX"]),
+        source=sources,
+    )
 else:
     library = env.SharedLibrary(
         "build/libgdraknet{}{}".format(env["suffix"], env["SHLIBSUFFIX"]),
